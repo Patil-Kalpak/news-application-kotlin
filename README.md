@@ -12,9 +12,9 @@ The News Application is an Android app that fetches news articles from the [News
 ## Screenshots
 
 <!-- Resize images using HTML width attribute -->
-<img src="screenshot1.jpg" width="200" alt="News App Screenshot 1">
-<img src="screenshot2.jpg" width="200" alt="News App Screenshot 2">
-<img src="screenshot3.jpg" width="200" alt="News App Screenshot 3">
+<img src="ss1.jpg" width="70" alt="News App Screenshot 1">
+<img src="ss2.jpg" width="70" alt="News App Screenshot 2">
+<img src="sst3.jpg" width="70" alt="News App Screenshot 3">
 
 ## Technologies Used
 
