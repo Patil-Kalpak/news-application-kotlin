@@ -3,6 +3,7 @@ package com.example.newsapplication
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity(),NewsItemClicked {
 
     private lateinit var mAdapter : NewsListAdapter
 
+    var url  = "https://saurav.tech/NewsAPI/everything/cnn.json"
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,14 +32,32 @@ class MainActivity : AppCompatActivity(),NewsItemClicked {
         mAdapter = NewsListAdapter(this)
         recyclerView.adapter = mAdapter
 
+         var businessButton : Button = findViewById(R.id.button1)
+         var healthButton : Button = findViewById(R.id.button2)
+         var technologyButton : Button = findViewById(R.id.button3)
 
+        businessButton.setOnClickListener(){
+            url = "https://saurav.tech/NewsAPI/top-headlines/category/business/in.json"
+            fetch()
+        }
+
+        healthButton.setOnClickListener()
+        {
+            url = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
+            fetch()
+        }
+
+
+        technologyButton.setOnClickListener()
+        {
+            url = "https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json"
+            fetch()
+        }
 
 
     }
 
     fun fetch() {
-        val url  = "https://saurav.tech/NewsAPI/everything/cnn.json"
-
 
         val JSON_request = JsonObjectRequest(
             Request.Method.GET, url,null,
@@ -69,13 +91,6 @@ class MainActivity : AppCompatActivity(),NewsItemClicked {
 
 
     }
-
-
-
-
-
-
-
     override fun onItemClicked(item: News) {
         val builder = CustomTabsIntent.Builder()
         val csIntent = builder.build()
@@ -83,4 +98,7 @@ class MainActivity : AppCompatActivity(),NewsItemClicked {
 
 
     }
+
+
+
 }
