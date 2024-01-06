@@ -7,13 +7,14 @@ The News Application is an Android app that fetches news articles from the [News
 - Fetches news articles from the News API.
 - Displays news titles, authors, and images.
 - Allows users to read full articles using Chrome Custom Tabs.
+- Fetch news articles based on categories with the new category-wise button.
 
 ## Screenshots
 
 <!-- Resize images using HTML width attribute -->
-<img src="screenshot1.jpg" width="200" alt="News App Screenshot 1">
-<img src="screenshot2.jpg" width="200" alt="News App Screenshot 2">
-<img src="screenshot3.jpg" width="200" alt="News App Screenshot 3">
+<img src="ss1.jpg" width="70" alt="News App Screenshot 1">
+<img src="ss2.jpg" width="70" alt="News App Screenshot 2">
+<img src="sst3.jpg" width="70" alt="News App Screenshot 3">
 
 ## Technologies Used
 
@@ -42,6 +43,8 @@ The News Application is an Android app that fetches news articles from the [News
 2. View the latest news articles.
 
 3. Click on a news item to read the full article using Chrome Custom Tabs.
+
+4. Use the new category-wise button to fetch news articles based on different categories.
 
 ## Contributing
 
